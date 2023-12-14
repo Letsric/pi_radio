@@ -8,4 +8,5 @@ func stop_playback() {
 		stop_playing <- true
 		currently_playing = ""
 	}
+	update_display()
 }

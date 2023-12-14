@@ -1,3 +1,5 @@
+// slightly modified example from minimp3 library
+
 package main
 
 import (

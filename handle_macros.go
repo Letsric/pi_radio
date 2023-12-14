@@ -26,10 +26,17 @@ func handle_macros(key string) {
 	case "R_ENTER":
 		info("Stopping playpack")
 		stop_playback()
+		update_display()
+	case "INS":
+		info("Display backlight off")
+		display_backlight(false)
+	case "DEL":
+		info("Display backlight on")
+		display_backlight(true)
 	case "END_1":
 		info("playing SWR1 BW")
 		stop_playback()
-		currently_playing = "SWR1 Baden-Würtemberg"
+		currently_playing = "SWR1 BW"
 		update_display()
 		audio_strean("https://liveradio.swr.de/sw282p3/swr1bw/")
 	case "DOWN":
