@@ -19,7 +19,8 @@ func main() {
 		fmt.Println(error)
 	}
 
-	// "global" vars
+	init_display()
+
 	events := logger.Read()
 
 	// range of events

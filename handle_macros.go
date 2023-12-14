@@ -30,16 +30,19 @@ func handle_macros(key string) {
 		info("playing SWR1 BW")
 		stop_playback()
 		currently_playing = "SWR1 Baden-Würtemberg"
+		update_display()
 		audio_strean("https://liveradio.swr.de/sw282p3/swr1bw/")
 	case "DOWN":
 		info("playing Radio Regenbogen")
 		stop_playback()
 		currently_playing = "Radio Regenbogen"
+		update_display()
 		audio_strean("https://audiotainment-sw.streamabc.net/atsw-regenbogen1011-mp3-128-1810210")
 	case "PGDN_3":
 		info("playing SWR3")
 		stop_playback()
 		currently_playing = "SWR3"
+		update_display()
 		audio_strean("https://liveradio.swr.de/sw282p3/swr3/")
 	}
 

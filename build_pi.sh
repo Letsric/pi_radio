@@ -7,6 +7,7 @@ scp \
 	logging.go \
 	playback.go \
 	handle_macros.go \
+	display.go \
 	go.mod \
 	go.sum \
 	$1:pi_radio/
