@@ -8,6 +8,7 @@ scp \
 	playback.go \
 	handle_macros.go \
 	display.go \
+	network.go \
 	go.mod \
 	go.sum \
 	$1:pi_radio/

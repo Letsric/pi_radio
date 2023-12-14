@@ -5,6 +5,7 @@ go 1.21.5
 require (
 	github.com/Letsric/tinypi_i2c v0.0.0-20231213201601-2fb93f86b82d
 	github.com/MarinX/keylogger v0.0.0-20210528193429-a54d7834cc1a
+	github.com/antelman107/net-wait-go v0.0.0-20220211074630-12d8a944b87d
 	github.com/hajimehoshi/oto v1.0.1
 	github.com/tosone/minimp3 v1.0.2
 	tinygo.org/x/drivers v0.26.0

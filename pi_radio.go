@@ -6,22 +6,34 @@ import (
 	"os/exec"
 )
 
+const input_device = "/dev/input/by-id/usb-Usb_KeyBoard_Usb_KeyBoard-event-kbd"
+
 var logger *keylogger.KeyLogger
+var state string
 
 func main() {
-	input_device := "/dev/input/by-id/usb-Usb_KeyBoard_Usb_KeyBoard-event-kbd"
-
 	title("Pi-Radio starting")
+
+	state = "init_display"
+	init_display()
+
+	state = "init_logger"
+	update_display()
+
 	var error error
 	logger, error = keylogger.New(input_device)
 	if error != nil {
 		info("Error starting keylogger:")
 		fmt.Println(error)
 	}
-
-	init_display()
-
 	events := logger.Read()
+
+	state = "wait_net"
+	update_display()
+	waitForNetwork()
+
+	state = "ready"
+	update_display()
 
 	// range of events
 	for e := range events {
