@@ -40,5 +40,24 @@ Radio with Raspberry Pi
    ```
 
 7. setup a Service
+   
+   edit the file `/etc/systemd/system/piradio.service` like this:
+   
+   ```
+   [Unit]
+   Description=Radio
+   
+   [Service]
+   ExecStart=/home/eric/pi_radio/pi_radio
+   Type=exec
+   Restart=always
+   
+   [Install]
+   WantedBy=multi-user.target
+   ```
+   
+   then run this to make it auto-start:
 
-**TODO**
+   ```bash
+   sudo systemctl enable --now piradio.service
+   ```
