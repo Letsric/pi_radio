@@ -27,10 +27,8 @@ Radio with Raspberry Pi
 
    ```bash
    sudo apt update
-   sudo apt install
+   sudo apt install libasound2-dev
    ```
-
-   **TODO** Write down all dependencies
 
 6. build the source code
 
